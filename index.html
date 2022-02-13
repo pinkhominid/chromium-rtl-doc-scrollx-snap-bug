@@ -2,6 +2,7 @@
 <html lang=en>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chromium RTL horizontal scrolling document with scroll snap x mandatory snaps to end and gets stuck.">
 
   <style>
     /* Minimal case */
@@ -49,14 +50,14 @@
     a, a:visited {
       display: block;
       color: rgba(255, 255, 255, .8);
-      text-align: right;
+      text-align: end;
     }
   </style>
 </head>
 
 <body onpageshow="document.documentElement.setAttribute('dir', rtl.checked ? 'rtl' : 'ltr')">
   <div id=controls>
-    <h1>Chromium RTL Document ScrollX Snap Bug</h1>
+    <h1>Chromium RTL horizontal scrolling document with scroll snap x mandatory snaps to end and gets stuck.</h1>
     <label>
         <input id=rtl type=checkbox oninput="document.documentElement.setAttribute('dir', this.checked ? 'rtl' : 'ltr')">
         rtl
