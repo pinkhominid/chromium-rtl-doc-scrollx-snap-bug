@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang=en>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    /* Minimal case */
+    html {
+      scroll-snap-type: x mandatory;
+    }
+    main {
+      display: flex;
+      flex-direction: row;
+    }
+    p {
+      scroll-snap-align: start;
+    }
+
+    /* Extra style */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      counter-reset: count;
+    }
+    p {
+      margin: 0;
+      padding: 10vw;
+      border: 1px dotted skyblue;
+      counter-increment: count;
+    }
+    p::after {
+      content: counter(count);
+    }
+    #controls {
+      position: fixed;
+      width: fit-content;
+      background-color: rgba(0, 0, 0, .8);
+      color: rgba(255, 255, 255, .8);
+      margin: 1rem;
+      padding: 1rem;
+      inset-block-end: 0;
+      inset-inline-end: 0;
+    }
+    h1 {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body onpageshow="document.documentElement.setAttribute('dir', rtl.checked ? 'rtl' : 'ltr')">
+  <div id=controls>
+    <h1>Chromium RTL Document ScrollX Snap Bug</h1>
+    <label>
+        <input id=rtl type=checkbox oninput="document.documentElement.setAttribute('dir', this.checked ? 'rtl' : 'ltr')">
+        rtl
+    </label>
+  </div>
+
+  <main>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+    <p>Item</p>
+  </main>
+</html>
